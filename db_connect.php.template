@@ -1,0 +1,6 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "YOUR_DATABASE_PASSWORD_HERE"; // placeholder
+$dbname = "foodresq";
+?>

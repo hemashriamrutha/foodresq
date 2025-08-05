@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodResQ - Food Waste Reduction</title>
+    <!-- The new CSS file -->
+    <link rel="stylesheet" href="style.css"> 
+    <!-- NEW: Add the Google Fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- The rest of your body content remains exactly the same -->
+    <header>
+        <h1>FoodResQ</h1>
+        <p>Connecting surplus food with those in need.</p>
+    </header>
+    <main>
+        <div class="container">
+            <div class="form-container">
+                <h2>Post a Donation</h2>
+                <form id="donation-form">
+                    <input type="text" name="foodName" placeholder="Food Name" required>
+                    <select name="category" required>
+                        <option value="">Select Category</option>
+                        <option value="Veg">Veg</option>
+                        <option value="Non-Veg">Non-Veg</option>
+                        <option value="Packaged">Packaged</option>
+                        <option value="Fresh">Fresh</option>
+                    </select>
+                    <input type="text" name="quantity" placeholder="Quantity (e.g., 2 Kgs, 5 packs)" required>
+                    <input type="date" name="expiryDate" required>
+                    <input type="text" name="location" placeholder="Pickup Location" required>
+                    <input type="text" name="contactInfo" placeholder="Contact Info (Email or Phone)" required>
+                    <button type="submit">Donate Now</button>
+                </form>
+                <p id="form-message"></p>
+            </div>
+            <div class="listings-container">
+                <h2>Available Donations</h2>
+                <div id="donations-list">
+                    <!-- Donations will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

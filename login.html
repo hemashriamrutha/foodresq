@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - FoodResQ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>FoodResQ Admin Login</h1>
+    </header>
+    <main>
+        <div class="form-container" style="margin: 2rem auto; max-width: 400px;">
+            <!-- Point the form to the new login.php logic -->
+            <form action="login.php" method="POST">
+                <h2>Enter Admin Username</h2>
+                <input type="text" name="username" placeholder="Username" required>
+                <!-- No password field! -->
+                <button type="submit">Login</button>
+            </form>
+            <!-- Show an error if the username was wrong -->
+            <?php if (isset($_GET['error'])): ?>
+                <p id="form-message" style="color: red; margin-top: 1rem;">Invalid Username.</p>
+            <?php endif; ?>
+        </div>
+    </main>
+</body>
+</html>
